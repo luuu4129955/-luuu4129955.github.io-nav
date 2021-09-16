@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>前航</title>
+  </head>
+  <body>
+    <header class="globalHeader">
+      <form class="searchForm" method="get" action="https://www.baidu.com/s">
+        <input name="wd" type="text" />
+        <button type="submit">搜索</button>
+      </form>
+      <!-- <input type="text" />
+      <button>搜索</button> -->
+    </header>
+    <main class="globalMain">
+      <ul class="siteList">
+        <li class="site">
+          <div class="siteImage">图标</div>
+          <div class="siteText">github</div>
+          <div class="delete">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-delete"></use>
+            </svg>
+          </div>
+        </li>
+        <li class="site">
+          <div class="siteImage">图标</div>
+          <div class="siteText">知乎</div>
+          <div class="delete">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-delete"></use>
+            </svg>
+          </div>
+        </li>
+        <li class="site last">
+          <div class="siteImage addSite">
+            <svg class="add" aria-hidden="true">
+              <use xlink:href="#icon-add"></use>
+            </svg>
+          </div>
+          <div class="siteText">新增</div>
+
+          <div class="box">
+            <div class="contentWrapper">
+              <div class="siteName">名称 <input id="name" type="text" /></div>
+              <br /><br />
+              <div class="siteAddress">
+                网址 <input id="address" type="text" />
+              </div>
+              <br /><br />
+              <button class="addButton">添加</button>
+              <button class="cancelButton">取消</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </main>
+    <script src="//at.alicdn.com/t/font_2809909_m8qjslyqmd.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

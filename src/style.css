@@ -1,0 +1,137 @@
+/* css reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  background-color: #dddddd;
+}
+ul li {
+  list-style: none;
+}
+.add {
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+.globalHeader > form.searchForm {
+  margin: 40px 30px 30px 30px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.globalHeader > form.searchForm > input {
+  outline: none;
+  flex-grow: 1;
+  padding-left: 10px;
+  background: #f1f3f4;
+  border: 1px solid #444245;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.globalHeader > .searchForm > button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  width: 70px;
+  margin-left: 12px;
+  background: #444245;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #fdfdfd;
+}
+.globalMain {
+  /* outline: 1px solid red; */
+  margin-left: 30px;
+  margin-right: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.siteList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.siteList > .site {
+  width: 70px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.siteList > .site > .siteImage {
+  height: 70px;
+  border-radius: 8px;
+  border: 1px solid #444245;
+  background-color: #f1f3f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+}
+
+.siteList > .site > .siteText {
+  text-align: center;
+  word-break: break-all;
+}
+.siteList > .site > .delete {
+  position: absolute;
+  right: 4px;
+  top: 2px;
+  cursor: default;
+}
+/* 弹出的box
+先隐藏，click再出现
+固定在视口中央 没做出来*/
+.box {
+  display: none;
+  position: fixed;
+  bottom: 30%;
+  left: 15px;
+  border-radius: 8px;
+  color: #444245;
+  max-width: 300px;
+  height: 140px;
+  background-color: #f1f3f4;
+  padding: 15px 20px;
+}
+.box > .contentWrapper {
+  width: 260px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.box > .contentWrapper > .siteName > input,
+.box > .contentWrapper > .siteAddress > input {
+  outline: none;
+  border: 1px solid #444245;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 5px;
+  width: 223px;
+  height: 22px;
+}
+
+.box > .contentWrapper > button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  width: 54px;
+  line-height: 28px;
+  background: #444245;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #fdfdfd;
+}
