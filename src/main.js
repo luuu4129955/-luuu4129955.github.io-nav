@@ -5,11 +5,17 @@ const xObject = JSON.parse(x);
 const hashMap = xObject || [
   {
     logo: "A",
-    name: "追番的",
     url: "https://www.acfun.cn",
   },
 ];
-
+// 简化url
+const simplifyUrl = (url) => {
+  return url
+    .replace("http://", "")
+    .replace("http://", "")
+    .replace("www", "")
+    .replace(/\/.*/, ""); //删除/开头的内容
+};
 // 渲染页面
 const render = () => {
   $siteList.find("li:not(.last)").remove();
@@ -20,7 +26,7 @@ const render = () => {
     const $newLi = $(`
     <li class="site">
           <div class="siteImage">${node.logo}</div>
-          <div class="siteText">${node.name}</div>
+          <div class="siteText">${simplifyUrl(node.url)}</div>
           <div class="delete">
             <svg class="icon" aria-hidden="true">
               <use xlink:href="#icon-delete"></use>
@@ -47,29 +53,18 @@ const render = () => {
 
 render();
 
-//点+号显示box
-$(".addSite").on("click", () => {
-  $(".box").css("display", "block"); //显示box
-});
-// 点‘取消’按钮 隐藏box
-$(".cancelButton").on("click", () => {
-  $(".box").css("display", "none");
-});
-
 //新增站点：输入名称+网址，添加到哈希数组中
 //这里应该是点+号 输入完后点确定 实现新增站点
-$(".addButton").on("click", () => {
-  //获取box 名称、网址input的内容 通过input的id获取
-  let $name = $("#name").val();
-  let $url = $("#address").val();
+$(".addSite").on("click", () => {
+  let url = window.prompt("请问你要添加的网址是：");
+
   //给内容加http://
-  // if ($url.indexOf("http") !== 0) {
-  //   $url = "http://" + $url;
-  // }
+  if (url.indexOf("http") !== 0) {
+    url = "http://" + url;
+  }
   hashMap.push({
-    logo: $name.substring(0, 1),
-    name: $name,
-    url: $url,
+    logo: simplifyUrl(url)[0].toUpperCase(),
+    url: url,
   });
 
   render(); //加到哈希组里后，再渲染一次页面

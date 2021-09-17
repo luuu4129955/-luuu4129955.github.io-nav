@@ -69,6 +69,7 @@ ul li {
   width: 70px;
   margin-bottom: 12px;
   position: relative;
+  margin-right: 6px;
 }
 
 .siteList > .site > .siteImage {
@@ -91,47 +92,4 @@ ul li {
   right: 4px;
   top: 2px;
   cursor: default;
-}
-/* 弹出的box
-先隐藏，click再出现
-固定在视口中央 没做出来*/
-.box {
-  display: none;
-  position: fixed;
-  bottom: 30%;
-  left: 15px;
-  border-radius: 8px;
-  color: #444245;
-  max-width: 300px;
-  height: 140px;
-  background-color: #f1f3f4;
-  padding: 15px 20px;
-}
-.box > .contentWrapper {
-  width: 260px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.box > .contentWrapper > .siteName > input,
-.box > .contentWrapper > .siteAddress > input {
-  outline: none;
-  border: 1px solid #444245;
-  box-sizing: border-box;
-  border-radius: 4px;
-  padding-left: 5px;
-  width: 223px;
-  height: 22px;
-}
-
-.box > .contentWrapper > button {
-  background-color: transparent;
-  outline: none;
-  border: none;
-  width: 54px;
-  line-height: 28px;
-  background: #444245;
-  border-radius: 4px;
-  font-size: 14px;
-  color: #fdfdfd;
 }
