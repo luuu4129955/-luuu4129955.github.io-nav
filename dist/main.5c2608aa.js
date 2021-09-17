@@ -144,7 +144,6 @@ var render = function render() {
 render();
 
 //新增站点：输入名称+网址，添加到哈希数组中
-//这里应该是点+号 输入完后点确定 实现新增站点
 $(".addSite").on("click", function () {
   var url = window.prompt("请问你要添加的网址是：");
 
