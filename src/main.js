@@ -11,7 +11,7 @@ const hashMap = xObject || [
 // 简化url
 const simplifyUrl = (url) => {
   return url
-    .replace("http://", "")
+    .replace("https://", "")
     .replace("http://", "")
     .replace("www", "")
     .replace(/\/.*/, ""); //删除/开头的内容
@@ -59,7 +59,7 @@ $(".addSite").on("click", () => {
 
   //给内容加http://
   if (url.indexOf("http") !== 0) {
-    url = "http://" + url;
+    url = "https://" + url;
   }
   hashMap.push({
     logo: simplifyUrl(url)[0].toUpperCase(),

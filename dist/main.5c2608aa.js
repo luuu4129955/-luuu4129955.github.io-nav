@@ -114,7 +114,7 @@ var hashMap = xObject || [{
 }];
 // 简化url
 var simplifyUrl = function simplifyUrl(url) {
-  return url.replace("http://", "").replace("http://", "").replace("www", "").replace(/\/.*/, ""); //删除/开头的内容
+  return url.replace("https://", "").replace("http://", "").replace("www", "").replace(/\/.*/, ""); //删除/开头的内容
 };
 // 渲染页面
 var render = function render() {
@@ -149,7 +149,7 @@ $(".addSite").on("click", function () {
 
   //给内容加http://
   if (url.indexOf("http") !== 0) {
-    url = "http://" + url;
+    url = "https://" + url;
   }
   hashMap.push({
     logo: simplifyUrl(url)[0].toUpperCase(),
@@ -193,7 +193,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '4944' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '2990' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
